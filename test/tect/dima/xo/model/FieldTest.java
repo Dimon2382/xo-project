@@ -11,14 +11,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class FieldTest {
 
     @Test
-    void getSize() {
+    void testGetSize() {
         Field field = new Field();
 
         assertEquals(3, field.getSize());
     }
 
     @Test
-    void setFigure() throws InvalidPointException, AlreadyOccupaiedException {
+    void testSetFigure() throws InvalidPointException, AlreadyOccupaiedException {
         Field field = new Field();
         Point inputPoint = new Point(0, 0);
         Figure inputFigure = Figure.O;
@@ -71,6 +71,19 @@ class FieldTest {
             field.getFigure(inputPoint);
             fail();
         } catch (InvalidPointException e) {
+
+        }
+    }
+    @Test
+    void testSetFigureWhenAlreadyOccupied() throws Exception {
+        Field field = new Field();
+        Point inputPoint = new Point(0, 0);
+        Figure inputFigure = Figure.O;
+        field.setFigure(inputPoint,inputFigure);
+        try {
+            field.setFigure(inputPoint,inputFigure);
+            fail();
+        } catch (AlreadyOccupaiedException e) {
 
         }
     }
