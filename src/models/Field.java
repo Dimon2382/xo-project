@@ -1,7 +1,7 @@
-package tect.dima.xo.model;
+package models;
 
-import tect.dima.xo.model.exceptions.AlreadyOccupaiedException;
-import tect.dima.xo.model.exceptions.InvalidPointException;
+import models.exceptions.InvalidPointException;
+import models.exceptions.AlreadyOccupaiedException;
 
 
 import java.awt.*;
@@ -26,13 +26,11 @@ public class Field {
         return field[point.x][point.y];
     }
 
-    public void setFigure(Point point, Figure figure) throws InvalidPointException, AlreadyOccupaiedException {
+    public void setFigure(Point point, Figure figure) throws InvalidPointException {
         if(!checkPoint(point)){
             throw new InvalidPointException();
         }
-        if(field[point.x][point.y] != null){
-            throw new AlreadyOccupaiedException();
-        }
+
         field[point.x][point.y] = figure;
     }
 // check valid coordinates
