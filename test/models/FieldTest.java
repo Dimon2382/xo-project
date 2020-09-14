@@ -1,8 +1,8 @@
-package tect.dima.xo.model;
+package models;
 
 import org.junit.jupiter.api.Test;
-import tect.dima.xo.model.exceptions.AlreadyOccupaiedException;
-import tect.dima.xo.model.exceptions.InvalidPointException;
+import models.exceptions.AlreadyOccupaiedException;
+import models.exceptions.InvalidPointException;
 
 import java.awt.*;
 
@@ -74,17 +74,6 @@ class FieldTest {
 
         }
     }
-    @Test
-    void testSetFigureWhenAlreadyOccupied() throws Exception {
-        Field field = new Field();
-        Point inputPoint = new Point(0, 0);
-        Figure inputFigure = Figure.O;
-        field.setFigure(inputPoint,inputFigure);
-        try {
-            field.setFigure(inputPoint,inputFigure);
-            fail();
-        } catch (AlreadyOccupaiedException e) {
 
-        }
     }
- }
+
