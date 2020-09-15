@@ -1,4 +1,4 @@
-package tect.dima.xo.model;
+package models;
 
 public class Player {
     private String name;

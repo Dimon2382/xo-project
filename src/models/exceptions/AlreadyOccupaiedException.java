@@ -1,4 +1,4 @@
-package tect.dima.xo.model.exceptions;
+package models.exceptions;
 
 public class AlreadyOccupaiedException extends XOException {
 }

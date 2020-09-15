@@ -1,11 +1,13 @@
-package tect.dima.xo.model;
+package models;
+
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PlayerTest {
 
-    @org.junit.jupiter.api.Test
-    void getName() {
+    @Test
+    void testGetName() throws Exception{
         String inputValue = "Dima";
         String expectedValue = inputValue;
 
@@ -16,8 +18,8 @@ class PlayerTest {
         assertEquals(expectedValue,actualValue);
     }
 
-    @org.junit.jupiter.api.Test
-    void getFigure() {
+    @Test
+    void testGetFigure() throws Exception {
         Figure inputValue = Figure.X;
         Figure expectedValue = inputValue;
 
@@ -28,3 +30,5 @@ class PlayerTest {
         assertEquals(expectedValue,actualValue);
     }
 }
+
+
